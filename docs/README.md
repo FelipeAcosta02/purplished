@@ -1,7 +1,7 @@
 ## Hello Developer!
 
 My name is Felipe Acosta and i would love to show you around our beatufil project.
-As you might know now, you've become a member of the development team behind Purplished. (If not the case please leave or find out how to become involved! PS, tell us how yo found us). Contact me [here](acosta_jf@icloud.com).
+As you might know now, you've become a member of the development team behind Purplished. (If not the case please leave or find out how to become involved! PS, tell us how yo found us). Contact me [here](MAILTO:acosta_jf@icloud.com).
 
 First things first. As of May the 23rd 2018, we are using a particular folder structure and Create React App development setup i will introduce you to very quickly.
 
