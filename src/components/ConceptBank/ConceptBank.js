@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ConceptBank.css';
+import styles from './ConceptBank.module.scss';
 import QuestionContainer from './QuestionContainer/QuestionContainer'
 import { generateID } from 'global/utilities'
 
@@ -39,7 +39,6 @@ class ConceptBank extends React.Component {
         )
         return(
             <Row type={'flex'} justify="center" className={styles.row}>
-                <div className={styles.row}> hey</div>
                 <Col span={22}>
                     <Card 
                     bordered

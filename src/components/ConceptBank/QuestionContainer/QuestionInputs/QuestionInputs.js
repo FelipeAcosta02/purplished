@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './QuestionInputs.css';
+import styles from './QuestionInputs.module.scss';
 import Aux from 'global/hoc/Aux'
 
 import { Input, Select } from 'antd';

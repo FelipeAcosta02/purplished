@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './QuestionContainer.css';
+import styles from './QuestionContainer.module.scss';
 import Aux from 'global/hoc/Aux';
 import { QuestionOptions, VerbInput, ConceptInput, LinkInput, AnswerInput, WrongAnswersInput } from './QuestionInputs/QuestionInputs';
 
