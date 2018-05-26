@@ -1,0 +1,1 @@
+export { default as deer } from './deer.svg'

@@ -13,4 +13,7 @@
 export const generateID = () => '_' + Math.random().toString(36).substr(2,9);
 
 //Converts Normal Strings to kebab-case
-export const convert = (string) => string.split(" ").join("-").toLowerCase();
+export const convertToKebabCase = (string) => string.split(" ").join("-").toLowerCase();
+
+//Returns a random element from an array
+export const returnRandomArrayElement = (array) => array[Math.floor(Math.random() * array.length)];

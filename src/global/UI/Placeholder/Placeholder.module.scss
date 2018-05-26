@@ -1,0 +1,29 @@
+$breakpoint: 500px;
+.div {
+    padding: 1em;
+    font-family: 'Cookie', cursive;
+    width: 65%;
+    margin: auto;
+    img {
+        margin-top: 0.8em;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    span {
+        margin-top: 3vw;
+        font-size: 10vw;
+        color: #722ED1;
+    }
+}
+
+@media screen and (min-width: $breakpoint) {
+    .div {
+        img {
+            width: $breakpoint*0.6;
+        }
+        span{
+            font-size: 4em;
+        }
+    }
+}

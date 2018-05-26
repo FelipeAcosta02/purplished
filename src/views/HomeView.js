@@ -1,5 +1,5 @@
 import React from 'react';
-import {  } from 'antd'
+import { Placeholder } from 'global/UI'
 
 
 class HomeView extends React.Component {
@@ -7,7 +7,7 @@ class HomeView extends React.Component {
         return(
             <div>
                 <h1>Home</h1>
-                
+                <Placeholder></Placeholder>
             </div>
         )
     }
