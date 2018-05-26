@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from './Auth.module.scss'
-import Form from './Form/Form'
-import { Placeholder } from 'global/UI'
 import SignInCarousel from './SignInCarousel/SignInCarousel'
 import LoginModal from './LoginModal/LoginModal'
-import { Input, Col, Row, Button } from 'antd';
+import { Col, Row, Button } from 'antd';
 
 class Auth extends React.Component {
     state = {

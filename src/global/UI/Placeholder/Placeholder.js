@@ -17,7 +17,7 @@ class Placeholder extends React.Component {
         }
         return(
             <div className={styles.div}>
-                <img src={deer} alt="Deer Image"/>
+                <img src={deer} alt="Deer Sketch"/>
                 {placeholderText}
             </div>
         )

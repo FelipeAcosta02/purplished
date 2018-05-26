@@ -1,7 +1,6 @@
 import React from 'react';
-import Aux from 'global/hoc/Aux'
 import styles from './Form.module.scss'
-import { Col, Input, Button, Row, Icon } from 'antd';
+import { Col, Input, Row } from 'antd';
 
 const form = (props) => {
     let firstPlaceholderText = ""

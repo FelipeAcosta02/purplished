@@ -1,12 +1,11 @@
 import React from 'react';
 import Routes from './routes'
-import { AppLayout } from 'global/UI'
 
 class App extends React.Component {
   
   render() {
     return (
-      <div style={{textAlign: 'center', display: 'flex'}}>
+      <div style={{textAlign: 'center', width:'100%', margin:'auto'}}>
           <Routes />
       </div>
     );

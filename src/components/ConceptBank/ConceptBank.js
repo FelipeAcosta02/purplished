@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './ConceptBank.module.scss'
-import {Aux} from 'global/hoc'
 import {TopBar} from 'global/UI'
 import ConceptCard from './ConceptCard/ConceptCard'
 

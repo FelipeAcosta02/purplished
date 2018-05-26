@@ -9,7 +9,7 @@ import SignInView from 'views/SignInView'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Menu, Icon, Layout } from 'antd';
 
-const { Header, Footer } = Layout
+const { Footer } = Layout
 
 class Routes extends React.Component {
     state = {
