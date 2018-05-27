@@ -2,32 +2,32 @@ import React from 'react';
 import styles from './Form.module.scss'
 import { Col, Input, Row } from 'antd';
 
-const form = (props) => {
-    let firstPlaceholderText = ""
-    let secondPlaceholderText = ""
+class Form extends React.Component {
+    render() {
+        let extraInput = null 
 
-    if (props.type === 'signIn') {
-        firstPlaceholderText = 'Name'
-        secondPlaceholderText = 'E-mail'
-    }
+        if (this.props.type === 'signIn') {
+            extraInput = <Col span={24} ><Input placeholder="Name"/></Col>
+        }
 
-    if (props.type === 'login') {
-        firstPlaceholderText = 'E-mail'
-        secondPlaceholderText = 'Password'
-    }
-
-    return(
-        <div className={styles.Div}>
+        if (this.props.type === 'login') {
+            // Default case
+            // Does nothing (yet)
+        }
+        return(
+            <div className={styles.Div}>
             <Row>
+                {extraInput}
+                
                 <Col span={24} >
-                    <Input placeholder={firstPlaceholderText}/>
+                    <Input placeholder="E-mail"/>
                 </Col>
                 <Col span={24} >
-                    <Input placeholder={secondPlaceholderText}/>
+                    <Input placeholder="Password"/>
                 </Col>
             </Row>
         </div>
-    )
+        )
+    }
 }
-
-export default form
+export default Form

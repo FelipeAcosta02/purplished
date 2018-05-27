@@ -1,32 +1,58 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core';
-
+import { Page, Text, View, Document, StyleSheet, /*Link, Font*/ } from '@react-pdf/core';
 
 // Create styles
 const styles = StyleSheet.create({
-  page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
+  title: {
+    margin: 20,
+    fontSize: 25,
+    textAlign: 'center',
+    textDecoration: 'underline',
+    textTransform: 'uppercase',
+    fontFamily: 'Roboto',
   },
-  section: {
+  heading: {
+    flexGrow: 3,
     margin: 10,
-    padding: 10,
-    flexGrow: 1
+    fontSize: 18,
+    fontFamily: 'Oswald',
+  },
+  content: {
+    flexGrow: 1,
   }
 });
 
-// Create Document Component
-const MyDocument = () => (
-  <Document>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View>
-    </Page>
-  </Document>
-);
+// Create PDF Component
+class PDFSample extends React.Component {
+  render() {
+    let content = []
+    let contentNum = this.props.contentNum
 
-export default MyDocument;
+    for (let i = 1; i <= contentNum; i++) {
+      content.push(<View>
+                      <Text style={styles.content}>
+                        {this.props.content}
+                      </Text>
+                      <br/>
+                    </View>)
+    }
+    return(
+      <Document>
+        <Page size="A4" wrap >
+          <View>
+            <Text style={styles.title}>{this.props.title}</Text>
+            <br/>
+          </View>
+          <View>
+            <Text style={styles.heading}>{this.props.heading}</Text>
+            <br/>
+          </View>
+          {content}
+        </Page>
+  </Document>
+  
+    )
+  }
+}
+
+export default PDFSample;

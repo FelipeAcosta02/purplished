@@ -23,7 +23,6 @@ class Routes extends React.Component {
         return (
             <Router>
                 <div>
-                    
                     <Menu
                         onClick={this.changedTabHandler}
                         selectedKeys={[this.state.current]}
