@@ -2,15 +2,15 @@ import React from 'react';
 import {  } from 'antd'
 
 
-class PdfMakerView extends React.Component {
+class PDFMakerView extends React.Component {
     render() {
         return(
             <div>
-                <h1>PDF</h1>
+                <h1>PDF maker</h1>
                 
             </div>
         )
     }
 }
 
-export default PdfMakerView
+export default PDFMakerView

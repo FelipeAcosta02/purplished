@@ -9,7 +9,7 @@ class AccountView extends React.Component {
             <div>
                 <h1>Account</h1>
                 <Button type="dashed" >
-                    <Link to="/pdf">
+                    <Link to="/pdf-maker">
                         Test PDF creator
                     </Link>
                     
