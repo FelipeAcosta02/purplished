@@ -1,5 +1,6 @@
 import React from 'react';
-import {  } from 'antd'
+import { Button } from 'antd'
+import { Link } from 'react-router-dom'
 
 
 class AccountView extends React.Component {
@@ -7,6 +8,12 @@ class AccountView extends React.Component {
         return(
             <div>
                 <h1>Account</h1>
+                <Button type="dashed" >
+                    <Link to="/pdf">
+                        Test PDF creator
+                    </Link>
+                    
+                </Button>
             </div>
         )
     }
