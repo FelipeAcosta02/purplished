@@ -1,5 +1,5 @@
 import React from 'react';
-import PDFSample from './PdfSample/PdfSample'
+import PDFSample from './PDFSample/PDFSample'
 import {  } from 'antd'
 
 
@@ -8,7 +8,6 @@ class PDFMakerView extends React.Component {
         return(
             <div>
                 <PDFSample />
-                
             </div>
         )
     }

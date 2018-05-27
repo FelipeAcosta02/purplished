@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core';
 
+
 // Create styles
 const styles = StyleSheet.create({
   page: {
