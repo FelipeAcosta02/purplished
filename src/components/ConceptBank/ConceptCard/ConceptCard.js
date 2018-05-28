@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './ConceptCard.module.scss';
 import Concept from './Concept/Concept'
-import { Card } from 'antd';
-const { Grid } = Card;
+import CardTitle from './CardTitle/CardTitle'
+
+import { Card, Icon } from 'antd';
 
 export default class extends React.Component {
     state = {
@@ -10,13 +11,16 @@ export default class extends React.Component {
     }
     render(){
         return(
-            <Card 
-            className={styles.Card}
-            title={"hey"}>
-                <Grid className={styles.Grid}> 
+                <Card 
+                className={styles.Card}
+                bodyStyle={{backgroundColor:'#722ED1', paddingTop:'2.8em'}}
+                title={<CardTitle/>}
+                type="inner"
+                actions={[<Icon type="plus-circle" />]}>
                     <Concept/>
-                </Grid>
-            </Card>
+                    <Concept/>
+                    <Concept/>
+                </Card>
         )
     }
 }

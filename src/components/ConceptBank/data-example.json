@@ -1,0 +1,44 @@
+{
+    "Fede Orozco": {
+        "email": "ana.orozco@gmail.com",
+        "password": "H2k_jZdj8-4kJmL_Ñs",
+        "payment": {
+            "on-time": true,
+            "plan": "monthly",
+            "ends": {},
+            "started": {}
+        },
+        "groups": {
+            "Segundo D": {
+                "A01568954": {}
+            }
+        },
+        "exams": {},
+        "classes": {
+            "Física": {
+                "1er Bimestre": {
+                    "Introducción a Despejes": {
+                        "Formula de Velocidad": {
+                            "instructions": "Responde los sigients cuestionamientos sobre la formula de velocidad",
+                            "document": "formulaVelocidad.jpg",
+                            "concepts": [
+                                [
+                                    {
+                                        "question": "la formula para el tiempo es:", 
+                                        "answers": ["T = D/V", "T = D*V", "T = T/V", "T = DV/V"], 
+                                        "sentence": []
+                                    },
+                                    {
+                                        "question": "Cuál es la fórmula despejada para Tiempo?", 
+                                        "answers": ["T = D/V", "No hay", "T=VD", "T=V/D"], 
+                                        "sentence": ["part one", "right", "part three"]
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
