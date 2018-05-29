@@ -1,4 +1,24 @@
-.Content {
+$c: rgb(255, 255, 255);
+$color: rgba($c,0.95);
+.Grid {
+    background-color: $color;
     width: 100%;
-    margin: auto;
+    box-shadow: none;
+    border: 1px solid $color;
+    margin-bottom: 2em;
+    padding: 0;
+    &:hover{
+        box-shadow: 0px 1px 10px 2px darken(#EBEBEB, 85);
+    }
 }
+.Alternative {
+    width: 100%;
+    display: block;
+    text-align: start;
+    margin-bottom: 0.8em;
+    Button {
+        margin-left: 1em;
+        transform: scaleX(-1);
+    } 
+}
+

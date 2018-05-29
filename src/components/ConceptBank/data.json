@@ -1,0 +1,62 @@
+{
+    "userID": {
+        "name": "name",
+        "last-name": "last name",
+        "email": "mail@mail.com",
+        "payment": {
+            "on-time": true,
+            "plan": "monthly",
+            "ends": {},
+            "started": {}
+        },
+        "groups": {
+            "group-name": {
+                "studentID": {}
+            }
+        },
+        "exams": {
+
+        },
+        "classes": {
+            "class-name": {
+                "topic-name": {
+                    "concept-bank-name": {
+                        "concept-card-name": {
+                            "instructions": "txt",
+                            "document": "data",
+                            "concepts": {
+                                "348hkrr_w4642": {
+                                    "ewvr_$53412-ew": {
+                                        "question": "a question", 
+                                        "answers": ["right", "wrong", "wrong", "wrong"], 
+                                        "sentence": ["part one", "right", "part three"]
+                                    },
+                                    "74d-f45_rgfghrwfs": {
+                                        "question": "a question", 
+                                        "answers": {
+                                            "correct": "yeah",
+                                            "inc1": "nah",
+                                            "inc2": "nah2",
+                                            "inc3": "nah3"
+                                        }, 
+                                        "sentence": {
+                                            "part1": "soemthing",
+                                            "part2": "soemthing"
+                                        }
+                                    }
+                                },
+                                "etwV_vqevQ_42": {
+                                    "7642_45142": {
+                                        "question": "a question", 
+                                        "answers": ["right", "wrong", "wrong", "wrong"], 
+                                        "sentence": ["part one", "right", "part three"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

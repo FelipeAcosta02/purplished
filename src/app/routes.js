@@ -5,7 +5,7 @@ import MyClassesView from 'views/MyClassesView';
 import MyGroupsView from 'views/MyGroupsView'; 
 import AccountView from 'views/AccountView';
 import SignInView from 'views/SignInView'
-import PDFMakerView from 'views/PDFMakerView(testing)'
+
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Menu, Icon, Layout } from 'antd';
@@ -14,7 +14,7 @@ const { Footer } = Layout
 
 class Routes extends React.Component {
     state = {
-        current: null
+        current: null, 
     }
     changedTabHandler = (event) => {
         this.setState({current: event.key})
@@ -55,7 +55,8 @@ class Routes extends React.Component {
                         <Route path="/create-test" component={CreateTestView} />
                         <Route path="/account" component={AccountView} />
                         <Route path="/sign-in" component={SignInView} />
-                        <Route path="/pdf-maker" component={PDFMakerView} />
+
+
 
                         <Footer>
                             **Footer text**
