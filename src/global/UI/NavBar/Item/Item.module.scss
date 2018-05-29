@@ -1,0 +1,28 @@
+@import "global/UI/colors.scss";
+
+
+.ItemDiv {
+    height: 50px;
+    padding: 15px 20px;
+    display: inline-block;
+
+    li {
+        list-style-type: none;
+        transition: all 0.4s ease-out;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+        &:hover {
+            color: $purple-9;
+        }
+        
+        
+    }
+    @media screen and (min-width: 900px){
+        float: center;
+        margin: 0px 34px;
+    }
+    @media screen and (min-width: 520px) and (max-width: 900px){
+        flex: 1;
+    }
+}
