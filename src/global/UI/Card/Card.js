@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Card.module.scss'
 
 const Heading = (props) => {
-    
+
 }
 const Content = (props) => {
 
@@ -19,15 +19,7 @@ export default class Card extends React.Component {
     render(){
         return(
             <div className={styles.Card}>
-                <div className={styles.}>
-
-                </div>
-                <div className={styles.}>
-
-                </div>
-                <div className={styles.}>
-
-                </div>
+               
             </div>
         )
     }
