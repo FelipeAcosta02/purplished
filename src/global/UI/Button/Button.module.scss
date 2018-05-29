@@ -1,0 +1,52 @@
+@import "../colors";
+Button {
+    transition: all 0.5s ease-out;
+    font-size: 15;
+    padding: 5px 15px;
+    border-radius: 4px;
+    line-height: 1.5;
+    display: inline-block;
+    border: 1px solid;
+    outline: none;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+Button.Default {
+    border-color: $purple-4;
+    cursor: pointer;
+    background-color: white;
+    color: $purple-4; 
+    &:active{
+        background-color: darken($color: white, $amount: 10);
+        opacity: 1;
+    }
+}
+Button.Primary {
+    border-color: $purple-4;
+    cursor: pointer;
+    background-color: $purple-6;
+    color: white; 
+    &:active{
+        background-color: darken($color: $purple-6, $amount: 10);
+        opacity: 1;
+    }
+}
+Button.Destroy{
+    cursor: pointer;
+    border-color: darken($color: $red, $amount: 5);
+    background-color: lighten($red, 5);
+    color: white; 
+    &:active{
+        background-color: darken($color: $red, $amount: 10);
+        opacity: 1;
+    }
+}
+Button.Disabled {
+    opacity: 0.6;
+    &:hover {
+        cursor: not-allowed !important;
+        box-shadow: none;
+        opacity: 0.6;
+    }
+}

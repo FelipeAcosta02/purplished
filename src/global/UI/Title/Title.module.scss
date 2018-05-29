@@ -1,0 +1,27 @@
+@import "../colors";
+.Giant{
+    font-size: 6em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.Big{
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+}
+.Medium{
+    font-size: 3em;
+font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.Small{
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+.dark{
+    color: $grey-3;
+}
+.purple{
+    color: $purple-5
+}
