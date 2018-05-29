@@ -14,7 +14,7 @@ const { Footer } = Layout
 
 class Routes extends React.Component {
     state = {
-        current: null, 
+
     }
     changedTabHandler = (event) => {
         this.setState({current: event.key})
@@ -26,7 +26,8 @@ class Routes extends React.Component {
                     <Menu
                         onClick={this.changedTabHandler}
                         selectedKeys={[this.state.current]}
-                        mode="horizontal">
+                        mode={this.state.mode}
+                        inlineCollapsed={this.state.collapsed}>
                             <Menu.Item key="home"> 
                                 <Link to="/" >Home</Link>
                             </Menu.Item>
