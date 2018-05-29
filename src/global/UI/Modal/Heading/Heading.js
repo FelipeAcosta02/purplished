@@ -5,7 +5,7 @@ import { Aux } from "global/hoc";
 const heading = (props) => (
 
     <Aux>
-        <div className={styles.CloseButton} onClick={props.closeHandler}>&times;</div>
+        <div className={styles.CloseButton} onClick={props.onClose}>&times;</div>
         <div className={styles.Heading} >
         
        {props.children}

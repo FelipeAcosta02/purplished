@@ -25,7 +25,7 @@ class Modal extends React.Component {
                 </div>
                 <Backdrop 
                     show={this.props.show}
-                    clicked={this.props.modalClosed} />
+                    clicked={this.props.onClose} />
             </Aux>
         )
     }

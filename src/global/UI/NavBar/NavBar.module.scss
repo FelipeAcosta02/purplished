@@ -1,0 +1,13 @@
+@import "global/UI/colors.scss";
+
+.NavBar {
+    border-bottom: 1px solid $purple-3;
+    background-color: $purple-6;
+    height: 50px;
+    width: 100%;
+    padding-left: 0px !important;
+    @media screen and (min-width: 520px) and (max-width: 900px){
+        display: flex;
+        background-color: $purple-6;
+    }
+}

@@ -1,11 +1,13 @@
 import React from 'react';
 import Modal from 'global/UI/Modal/Modal'
+import NavBar from 'global/UI/NavBar/NavBar'
+
 
 const { Heading, Content, Footer } = Modal
 
 class AccountView extends React.Component {
     state = {
-        visible: true
+        visible: false
     }
     showModal = () => {
         this.setState({visible: true})
@@ -21,8 +23,8 @@ class AccountView extends React.Component {
                 <h1>Account</h1>
                 <Modal 
                     show={this.state.visible} 
-                    modalClosed={this.closeModal} >
-                    <Heading closeHandler={this.closeModal} >
+                    onClose={this.closeModal} >
+                    <Heading onClose={this.closeModal} >
                         Heading text
                     </Heading>
                     <Content>
@@ -33,6 +35,7 @@ class AccountView extends React.Component {
                     </Footer>
                 </Modal>
                 <button onClick={this.showModal} >Show modal</button>
+                <NavBar></NavBar>
             </div>
         )
     }
