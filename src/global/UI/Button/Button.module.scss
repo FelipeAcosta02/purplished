@@ -9,11 +9,12 @@ Button {
     border: 1px solid;
     outline: none;
     &:hover {
-        opacity: 0.9;
+        box-shadow: 0 0.2px 0.5px whitesmoke;
+        opacity: 0.85;
     }
 }
 Button.Default {
-    border-color: $purple-4;
+    border-color: $purple-3;
     cursor: pointer;
     background-color: white;
     color: $purple-4; 

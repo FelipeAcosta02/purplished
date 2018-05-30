@@ -1,0 +1,19 @@
+@import "../colors";
+.Footer{
+    background-color: $grey-4;
+    display: block;
+    min-height: 100px;
+    width: 100;
+    color: whitesmoke;
+    .Element{
+        ul{
+            li{
+                margin: auto;
+                width: 40px;
+            }
+        }
+        p{
+            color: $purple-6
+        }
+    }
+}

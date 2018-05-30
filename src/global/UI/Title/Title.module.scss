@@ -2,17 +2,17 @@
 .Giant{
     font-size: 6em;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: .3em;
 }
 .Big{
     font-size: 4em;
     font-weight: bold;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.2em;
 }
 .Medium{
     font-size: 3em;
 font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
 }
 .Small{
     font-size: 1em;
@@ -24,4 +24,7 @@ font-weight: bold;
 }
 .purple{
     color: $purple-5
+}
+.white{
+    color: whitesmoke;
 }

@@ -1,0 +1,52 @@
+@import "global/UI/colors.scss";
+
+.NavBar {
+    height: 50px;
+    width: 100%;
+    padding-left: 0px !important;
+    @media screen and (min-width: 520px) and (max-width: 900px){
+        display: flex;
+    }
+}
+.ItemDiv {
+    height: 50px;
+    padding: 15px 20px;
+    display: inline-block;
+    li {
+        list-style-type: none;
+        transition: all 0.4s ease-out;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    @media screen and (min-width: 900px){
+        float: center;
+        margin: 0px 34px;
+    }
+    @media screen and (min-width: 520px) and (max-width: 900px){
+        flex: 1;
+    }
+}
+.Primary{
+    &.NavBar{
+        border-bottom: 1px solid $purple-3;
+        background-color: $purple-6;
+    }
+    .ItemDiv li{
+        color: whitesmoke;
+        &:hover{
+            color: $purple-9;
+        }
+    }
+}
+.Secondary{
+    &.NavBar{
+        border-bottom: 1px solid $grey-8;
+        background-color: whitesmoke;
+    }
+    .ItemDiv li{
+        color: $purple-6;
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}

@@ -4,37 +4,26 @@ import styles from './Input.module.scss'
 
 export default class Input extends React.Component {
     render(){
-            let addonBefore = null;
-            let addonAfter = null
+            let {addonBefore, addonAfter, is, ...rest } = this.props
             let input = null
-            if(this.props.addonBefore){
-                addonBefore = (<span className={styles.addonBefore}>
-                                    {this.props.addonBefore}
-                                </span>)
-            }
-            if(this.props.addonAfter){
-                addonAfter =    (<span className={styles.addonAfter}>
-                                    {this.props.addonAfter}
-                                </span>)
-            }
-            if(this.props.is==="Area"){
-                input = (<textarea  {...this.props} className={styles[this.props.is]} placeholder={this.props.placeholder}/>)
+            let AddonBefore = addonBefore ? (<span className={styles.addonBefore}>{addonBefore}</span>) : null
+            let AddonAfter = addonAfter ? (<span className={styles.addonAfter}>{addonAfter}</span>) : null
+            if(is==="Area"){
+                input = (<textarea  {...rest} className={styles[is]}/>)
             }else{
-                input = <input  {...this.props} className={styles[this.props.is]}  onChange={this.props.onChange} placeholder={this.props.placeholder}/>
+                input = <input  {...rest} className={styles[is]}/>
             }
         return(
             <div className={styles.div}>
-                {addonBefore}
+                {AddonBefore}
                 {input}
-                {addonAfter}
+                {AddonAfter}
             </div>
         )
     }
 }
 Input.propTypes={
     is: PropTypes.oneOf(['Area', 'Default', 'Large', 'Small']),
-    placeholder: PropTypes.string,
     addonAfter: PropTypes.element,
     addonBefore: PropTypes.element,
-    onChange: PropTypes.func
 }

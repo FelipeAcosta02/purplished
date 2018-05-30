@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Button, TopBar, Input, Card, Placeholder, Title} from 'global/UI'
-
+import {Button, TopBar, Input, Card, Placeholder, Title, Icon} from 'global/UI'
 
 class HomeView extends Component {
     render() {
@@ -9,14 +8,11 @@ class HomeView extends Component {
                 <TopBar>Click Me!</TopBar><br/>
                 <br/><br/><br/>
                 <Title is="Giant" color="dark">Hello!</Title>
-                <Card>hello world!</Card>
-                <h1>Home</h1><br/>
-                <Placeholder/><br/>
-                <Button is="Primary" onClick={()=> console.log('clicked!')}>Top Bar!</Button><br/><br/><br/><br/>
-                <Input  addonAfter={"hey"} onChange={(event)=>console.log(event.target.value)} /><br/>
-                <Input is="Area"  addonBefore={<Button is="Destroy">hey</Button>}/><br/>
-                <Input is="Small"  addonAfter={<Button is="Primary">hey</Button>} addonBefore={<div>---</div>}/><br/>
-                <Input  is="Large"  addonBefore={<div>hey</div>} placeholder="type your credit card information"/><br/>
+                <Card is='Light' above={<Button>Hey</Button>} below={<Button>Bye</Button>} style={{width:'90%', margin: 'auto'}}>hello world!  <br/> From a Light Card </Card><br/>
+                <Card is='Dark' above={<Title color='white' >Hey!</Title>} below={<Button>Bye</Button>} style={{width:'90%', margin: 'auto'}}>hello world! <br/> From a Dark Card </Card>
+                <Icon is="link" size={128} from="Feathericons"/>
+                <Card above={<Title color='Purple'>Hey!</Title>} below={<Button>Bye</Button>} style={{width:'90%', margin: 'auto'}}>hello world! <br/> From a Primary Card </Card>
+                <Icon is="link" size={128} from="Feathericons"/>
             </div>
         )
     }

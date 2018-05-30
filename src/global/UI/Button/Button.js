@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.scss'
 
 export default class Button extends React.Component {
-    render() {
+    render(){  
+        let {is, children, ...rest} = this.props  
         return(
-            <button {...this.props} className={styles[this.props.is]}>{this.props.children}</button>
+            <button className={styles[is]} {...rest}>{children}</button>
         )
     }
 }

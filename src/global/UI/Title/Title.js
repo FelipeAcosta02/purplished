@@ -4,9 +4,10 @@ import styles from './Title.module.scss'
 
 export default class Title extends React.Component {
     render(){
+        let {is, color, children, ...rest} = this.props
         return(
-            <h1 class={styles[this.props.is]+' '+styles[this.props.color]}  {...this.props}>
-                {this.props.children}
+            <h1 class={styles[is]+' '+styles[color]}  {...rest}>
+                {children}
             </h1>
         )
     }
@@ -17,5 +18,5 @@ Title.defaultProps={
 }
 Title.propTypes={
     is: PropTypes.oneOf(['Giant', 'Big', 'Medium', 'Small']),
-    color: PropTypes.oneOf(['dark', 'purple'])
+    color: PropTypes.oneOf(['dark', 'purple', 'white'])
 }

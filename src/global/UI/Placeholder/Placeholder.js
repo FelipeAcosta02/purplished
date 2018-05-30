@@ -4,15 +4,13 @@ import styles from './Placeholder.module.scss'
 import { deer } from 'global/assets'
 import {returnRandomArrayElement} from 'global/utilities'
 
-/**
-* @augments {Component<{says:arrayOfstring)>}
-*/
 export default class Placeholder extends Component {
     render(){
+        let {says, ...rest} = this.props
         return(
-            <div className={styles.div}>
+            <div className={styles.div} {...rest}>
                 <img src={deer} alt="Deer Sketch"/>
-                <span>{returnRandomArrayElement(this.props.says)}</span>
+                <span>{returnRandomArrayElement(says)}</span>
             </div>
         )
     }
