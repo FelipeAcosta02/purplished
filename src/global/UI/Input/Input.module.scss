@@ -60,10 +60,12 @@
     }
     input, textarea{
         border: none !important;
-        border-radius: 0;
-        background-color: transparent;
+        border-radius: 2.8px;
+        background-color: white;
         flex: 1;
         outline: none;
+        padding: 0.4em 0.6em;
+        
         &.Area{
 
         }
@@ -79,4 +81,12 @@
             font-size: 0.6em;
         }
     }
+}
+.BorderLeft{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.BorderRight{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }

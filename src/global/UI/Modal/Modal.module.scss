@@ -1,8 +1,9 @@
+@import "global/UI/colors.scss";
+
 .Modal {
     position: fixed;
     height: auto;
     z-index: 1000;
-    background-color: white;
     width: 70%;
     border-radius: 5px; 
     box-shadow: 1px 1px 1px black;
@@ -16,42 +17,51 @@
     }
 }
 .Content {
+    border-bottom: 0.1px solid $purple-4;
+    border-top: 0.1px solid $purple-4;    
     height: auto;
-    width: 100%;
+    width: auto;
+    color: $grey-3;
     padding: 15px;
-    text-align: left
+    text-align: left;
+    background-color: $purple-10;
 }
 .Footer {
     height: auto;
-    background-color: rgba($color: gray, $alpha: 0.05);
+    background-color: whitesmoke;
     width: 100%;
-    border-top: 1px solid rgba($color: gray, $alpha: 0.1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 10px 20px;
     text-align: right;
 }
 .Heading {
+    font-size: 1.6em;
+    color: $purple-5;
+    font-weight: bold;
     height: auto;
-    background-color: rgba($color: gray, $alpha: 0.05);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: whitesmoke;
     left: 0;
     top: 0;
     width: 100%;
-    border-bottom: 1px solid rgba($color: gray, $alpha: 0.1);
     padding: 15px;
     text-align: left
 
 }
 
 .CloseButton {
-    color: gray;
-    height: 10px;
-    width: 10px;
+    color: $purple-5;
+    height: 15px;
+    width: 15px;
     float: right;
     margin: 5px 20px;
     font-size: 20px;
     font-weight: bold;
     transition: all 0.5s ease-out;
     &:hover{
-        color: #000;
+        color: $purple-7;
         text-decoration: none;
         cursor: pointer;
     }

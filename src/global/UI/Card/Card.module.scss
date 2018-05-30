@@ -24,24 +24,17 @@
     background-color: whitesmoke;
     color: $grey-3;
   }
-  .Footer{
-    background-color: $purple-5;
-  }
-  .Heading{
+  .Footer, .Heading {
     background-color: $purple-5;
   }
 }
 .Dark {
   &.Card{border: 0.5px solid $purple-2;}
   .Content{
-    color: #ffd32a;
+    color: $yellow;
     background-color: $grey-3
   }
-  .Footer{
-    color: white;
-    background-color: $purple-2;
-  }
-  .Heading{
+  .Footer, .Heading {
     color: white;
     background-color: $purple-2;
   }
@@ -52,11 +45,7 @@
     color: white;
     background-color: $purple-5
   }
-  .Footer{
-    color: $grey-3;
-    background-color: whitesmoke;
-  }
-  .Heading{
+  .Footer, .Heading {
     color: $grey-3;
     background-color: whitesmoke;
   }

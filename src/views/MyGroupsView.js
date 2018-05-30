@@ -1,6 +1,4 @@
 import React from 'react';
-import {  } from 'antd'
-
 
 class MyGroupsView extends React.Component {
     render() {

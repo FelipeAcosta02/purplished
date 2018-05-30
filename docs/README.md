@@ -7,14 +7,12 @@ First things first. As of May the 23rd 2018, we are using a particular folder st
 
 ## The Tools
 
-This app uses Redux for state management, Antd for the UI, CSS modules for styling, and Enzyme for testing.
+This app uses Redux for state management, CSS modules for styling, and Enzyme for testing.
 
 ## The Development setup
 
-This app was created with Create React App, and to avid ejecting, we make use of the `react-app-rewired` scripts package. The setp currently allows for the import of [ant.design](ant.design)'s via the syntax
-```js
-import { Button } from 'antd';
-```
+This app was created with Create React App, and to avid ejecting, we make use of the `react-app-rewired` scripts package. 
+
 which makes use of the `config-overrides.js` as made clear by this [tutorial](https://ant.design/docs/react/use-with-create-react-app#Use-babel-plugin-import).
 
 Along with this, the `config-overrides.js` is also used to enable CSS modules that can be used via the `*.module.css`, `*.module.scss`, or `*.module.sass` file extensions. Meanshile, `*.css`, `*.scss`, and `*.sass`, remain globally-scoped styles.

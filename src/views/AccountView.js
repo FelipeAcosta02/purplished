@@ -22,13 +22,17 @@ class AccountView extends React.Component {
             <div>
                 <h1>Account</h1>
                 <Modal 
-                    show={this.state.visible} 
-                    onClose={this.closeModal} 
-                    above={'Heading text'}
-                    below={<Button onClick={this.closeModal} >OK</Button>}>
-                    Content text
+                show={this.state.visible} 
+                onClose={this.closeModal} 
+                above={'Heading text'}
+                below={<Button onClick={this.closeModal}  >OK</Button>}>
+                    Content text <br/>
+                    Content text <br/>
+                    Content text <br/>
+                    Content text <br/>
+                    Content text <br/>
                 </Modal>
-                <Button onClick={this.showModal}>Show modal</Button>
+                <Button onClick={this.showModal} is="Primary" >Show modal</Button>
             </div>
         )
     }

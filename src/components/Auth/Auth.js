@@ -1,27 +1,22 @@
 import React from 'react';
 import styles from './Auth.module.scss'
-import LoginModal from './LoginModal/LoginModal'
 import Form from './Form/Form'
-import { Col, Row, Button } from 'antd';
+import {Modal, Button} from 'global/UI'
+import { Row, Col } from "react-grid-system";
 
 class Auth extends React.Component {
     state = {
         visible: false,
-        confirmLoading: false
     }
     showModal = () => {
         this.setState({visible: true})
     }
-    handleOk = () => {
-    this.setState({confirmLoading: true});
-    setTimeout(() => {this.setState({visible: false,confirmLoading: false})}, 2000);
-    }
-    handleCancel = () => {this.setState({visible: false})}
+    closeModal = () => {
+        this.setState({visible: false})}
     render() {
-    const { visible, confirmLoading } = this.state
+    const { visible } = this.state
         return(
             <div className={styles.Div}>
-
                 <Row type="flex" justify="center" >
                     <Col span={24} >
                         <h1>Sign in</h1>
@@ -32,26 +27,42 @@ class Auth extends React.Component {
                         </div>
                     </Col>
                     <Col span={24} >
-                        <Button type="primary" >Continue</Button>
+                        <Button 
+                            style={styling.button} 
+                            is="Primary" >
+                                Continue
+                        </Button>
                     </Col>
 
                     <Col span={24} >
                         <p className={styles.p}>Already have an account?</p>
                         <Button 
-                            className={styles.Button} 
-                            type="ghost" 
+                            style={styling.button} 
                             onClick={this.showModal}>
                                 Log in
                         </Button>
                     </Col>
                 </Row>
-                <LoginModal 
-                    isVisible={visible} 
-                    confirmLoading={confirmLoading}
-                    cancel={this.handleCancel} 
-                    ok={this.handleOk}/>
+                <Modal
+                    above={'Log in'}
+                    show={visible} 
+                    onClose={this.closeModal}
+                    below={ <Button 
+                                onClick={this.closeModal} 
+                                is="Primary">
+                                    Continue
+                            </Button>} >
+                        <div>
+                            <Form type="login"/>
+                        </div>
+                </Modal>
             </div>
         );
+    }
+}
+const styling = {
+    button : {
+        marginTop: '20px'
     }
 }
 

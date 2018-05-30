@@ -30,3 +30,6 @@ export {default as Icon} from './Icon/Icon'
 
 //Footer
 export {default as Footer} from './Footer/Footer'
+
+//Grid
+export {default as Grid}  from './Grid/Grid'

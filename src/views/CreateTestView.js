@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ConceptBank from 'components/ConceptBank/ConceptBank'
 
 class CreateTestView extends React.Component {

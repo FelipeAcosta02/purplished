@@ -1,4 +1,3 @@
-import 'regenerator-runtime/runtime'; //Support for react-pdf 
 import React from 'react';
 import ReactDOM from 'react-dom';
 

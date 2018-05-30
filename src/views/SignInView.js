@@ -1,7 +1,5 @@
 import React from 'react';
 import Auth from 'components/Auth/Auth'
-import {  } from 'antd'
-
 
 class SignInView extends React.Component {
     render() {

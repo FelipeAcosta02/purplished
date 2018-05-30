@@ -8,10 +8,13 @@ export default class Input extends React.Component {
             let input = null
             let AddonBefore = addonBefore ? (<span className={styles.addonBefore}>{addonBefore}</span>) : null
             let AddonAfter = addonAfter ? (<span className={styles.addonAfter}>{addonAfter}</span>) : null
+            let InputStyles = [styles[is]+' '];
+            if (addonBefore) { InputStyles.push(styles.BorderLeft+' ') }
+            if (addonAfter) { InputStyles.push(styles.BorderRight+' ') }
             if(is==="Area"){
-                input = (<textarea  {...rest} className={styles[is]}/>)
+                input = (<textarea  {...rest} className={InputStyles}/>)
             }else{
-                input = <input  {...rest} className={styles[is]}/>
+                input = <input  {...rest} className={InputStyles}/>
             }
         return(
             <div className={styles.div}>

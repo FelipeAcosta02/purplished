@@ -1,0 +1,72 @@
+@import "../colors";
+.Grid{
+    width: 90%;
+    margin: auto;
+    border: 1px solid;
+    transition: all .3s ease-out;
+    margin-bottom: .85em;
+    &:hover{
+        box-shadow: 0px 2px 8px 2px $grey-3;
+    }
+    .Content{
+        padding: .2em .2em;
+        margin: auto;
+        width: 100%;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+    .Above, .Below{
+        margin: auto;
+        width: 100%;
+        padding: .2em .2em;
+        font-size: 1.2em;
+    }
+    .Above{
+        border-bottom: 1px solid;
+    }
+    .Below{
+        border-top: 1px solid;
+    }
+}
+.Light{
+    border-color: whitesmoke;
+    color: $grey-3;
+    .Content{
+        border-color: inherit;
+        color: inherit;
+        background-color: transparentize($color: whitesmoke, $amount: .15);
+    }
+    .Above, .Below{
+        border-color: inherit;
+        background-color: transparentize($color: whitesmoke, $amount: .5);
+        color: inherit;
+    }
+}
+.Dark{
+    border-color: $grey-1;
+    color: $yellow;
+    .Content{
+        border-color: inherit;
+        color: inherit;
+        background-color: transparentize($color: $grey-3, $amount: .15);
+    }
+    .Above, .Below{
+        border-color: inherit;
+        background-color: transparentize($color: $grey-3, $amount: .5);
+        color: inherit;
+    }
+}
+.Primary{
+    border-color: $purple-5;
+    color: whitesmoke;
+    .Content{
+        border-color: inherit;
+        color: inherit;
+        background-color: transparentize($color: $purple-5, $amount: .15);
+    }
+    .Above, .Below{
+        border-color: inherit;
+        background-color: transparentize($color: $purple-5, $amount: .5);
+        color: inherit;
+    }
+}
