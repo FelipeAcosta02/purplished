@@ -1,42 +1,36 @@
-import React from 'react';
-import HomeView from 'views/HomeView';
-import CreateTestView from 'views/CreateTestView';
-import MyClassesView from 'views/MyClassesView'; 
-import MyGroupsView from 'views/MyGroupsView'; 
-import AccountView from 'views/AccountView';
-import SignInView from 'views/SignInView'
-
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react'
+import * as Views from 'views/_index'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import {Navbar, Footer} from 'global/UI'
+import {pascalToKebab} from 'global/utilities'
 
 
 class Routes extends React.Component {
     state = {
-        footerLinks:    [{main:"My Classes", subs:['My Topics', 'Your Topics']},
-                        {main:"Main", subs:['Page 1', 'Page 2']},
-                        {main:"Lol", subs:['lol', 'hahaha']},
-                        {main:"Test", subs:['i want to sleep', 'but this is fun']},]
+        footerLinks: []
     }
     changedTabHandler = (event) => {
         this.setState({current: event.key})
     }
     render() {
+        let views = Object.keys(Views).map((View, i)=>{
+            if (View==='Home'){
+                return(<Route exact path='/' key={i} component={Views[View]} />)
+            }else{
+                return(<Route path={'/'+pascalToKebab(View)} key={i} component={Views[View]} />)
+            }})
+        console.log(views)
         return (
             <Router>
                 <div>
-                    <Navbar is="Primary" links={['/', 'My Classes', 'My Groups', 'Create Test', 'Account', 'Sign In']} />    
-                        <Route exact path="/" component={HomeView} />
-                        <Route path="/my-classes" component={MyClassesView} />
-                        <Route path="/my-groups" component={MyGroupsView} />
-                        <Route path="/create-test" component={CreateTestView} />
-                        <Route path="/account" component={AccountView} />
-                        <Route path="/sign-in" component={SignInView} />
-
-                        <Footer links={this.state.footerLinks}/>
-                    </div>
+                <Navbar is="Primary" links={['Home', 'My Classes', 'My Groups', 'Create Test', 'Account', 'Sign In']} />    
+                    {views}
+                <Footer links={this.state.footerLinks}/>
+                </div>
             </Router>
         )
     }
+    //<Route path="/my-classes" component={MyClassesView}
    
 }
 

@@ -33,3 +33,6 @@ export {default as Footer} from './Footer/Footer'
 
 //Grid
 export {default as Grid}  from './Grid/Grid'
+
+//Logo
+export {default as Logo} from './Logo/Logo'

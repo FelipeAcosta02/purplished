@@ -2,9 +2,6 @@ import React from 'react';
 import Modal from 'global/UI/Modal/Modal'
 import {Button} from 'global/UI'
 
-
-const { Heading, Content, Footer } = Modal
-
 class AccountView extends React.Component {
     state = {
         visible: false

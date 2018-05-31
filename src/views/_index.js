@@ -1,0 +1,6 @@
+export {default as Account} from './AccountView'
+export {default as CreateTest} from './CreateTestView'
+export {default as Home} from './HomeView'
+export {default as MyClasses} from './MyClassesView'
+export {default as MyGroups} from './MyGroupsView'
+export {default as SignIn} from './SignInView'

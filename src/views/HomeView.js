@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Button, TopBar, Input, Card, Placeholder, Title, Icon, Grid} from 'global/UI'
+import {Button, TopBar, Card, Title, Grid} from 'global/UI'
 
 class HomeView extends Component {
     render() {
         return (
             <div style={{marginBottom: '500px', width: '100%'}}>
-                <TopBar>Click Me!</TopBar><br/>
+                <TopBar>Click You!</TopBar><br/>
                 <br/><br/><br/>
                 <Title is="Giant" color="dark">Hello!</Title>
                 <Card 
