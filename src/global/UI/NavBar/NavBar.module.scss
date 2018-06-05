@@ -5,11 +5,13 @@
     width: 100%;
     padding-left: 0px !important;
     display: flex;
+    z-index: 60;
 }
 .ItemDiv {
     height: 50px;
     display: inline-block;
     margin: auto;
+    z-index: 60;
     li {
         margin: 15px 20px !important;
         vertical-align: middle;
@@ -30,8 +32,14 @@
             color: $purple-9;
         }
     }
+    .Hamburger {   
+        margin: 0 !important;
+        width: 50px;
+        height: 100%;
+        z-index: 60;
+    }
 }
-.Secondary{
+.Default{
     &.NavBar{
         border-bottom: 1px solid $grey-8;
         background-color: whitesmoke;
@@ -40,6 +48,43 @@
         color: $purple-6;
         &:hover{
             opacity: 0.9;
+        }
+    }
+    .Hamburger {   
+        margin: 0 !important;
+        width: 50px;
+        height: 100%;
+        z-index: 60;
+    }
+}
+
+
+// Vertical Navigation bar styling 
+.Vertical {
+    position: absolute;
+    margin-top: 49px;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    z-index: 50;
+    &.Primary {
+        background-color: $purple-6;
+        color: whitesmoke;
+        border-bottom: 1px solid $purple-3;
+    }
+    &.Default {
+        background-color: whitesmoke;
+        color: $purple-6;
+        border-bottom: 1px solid $grey-8;
+    }
+    .ItemDiv {
+        height: 50px;
+        width: 100%;
+        display: inline-block;
+        li {
+            list-style-type: none;
+            font-size: 1em;
+            cursor: pointer;
+            
         }
     }
 }
