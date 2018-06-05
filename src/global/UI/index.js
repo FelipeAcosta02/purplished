@@ -23,7 +23,7 @@ export {default as Modal} from './Modal/Modal'
 export {default as Backdrop} from './Backdrop/Backdrop'
 
 //Navbar
-export {default as Navbar} from './Navbar/Navbar'
+export {default as NavBar} from './NavBar/NavBar'
 
 //Icon
 export {default as Icon} from './Icon/Icon'
@@ -36,3 +36,6 @@ export {default as Grid}  from './Grid/Grid'
 
 //Logo
 export {default as Logo} from './Logo/Logo'
+
+// Loading spinner
+export {default as Spinner} from './Spinner/Spinner'

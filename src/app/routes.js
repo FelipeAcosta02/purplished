@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Views from 'views/_index'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {Navbar, Footer} from 'global/UI'
+import {NavBar, Footer} from 'global/UI'
 import {pascalToKebab} from 'global/utilities'
 
 
@@ -23,7 +23,7 @@ class Routes extends React.Component {
         return (
             <Router>
                 <div>
-                <Navbar is="Primary" links={['Home', 'My Classes', 'My Groups', 'Create Test', 'Account', 'Sign In']} />    
+                <NavBar is="Primary" links={['Home', 'My Classes', 'My Groups', 'Create Test', 'Account', 'Sign In']} />    
                     {views}
                 <Footer links={this.state.footerLinks}/>
                 </div>
