@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import {NavBar, Footer} from 'global/UI'
 import {pascalToKebab} from 'global/utilities'
 
-
 class Routes extends React.Component {
     state = {
         footerLinks: []
@@ -23,9 +22,9 @@ class Routes extends React.Component {
         return (
             <Router>
                 <div>
-                <NavBar is="Primary" links={['Home', 'My Classes', 'My Groups', 'Create Test', 'Account', 'Sign In']} />    
+                    <NavBar is="Primary" links={['Home', 'My Classes', 'My Groups', 'Create Test', 'Account', 'Sign In']} />
                     {views}
-                <Footer links={this.state.footerLinks}/>
+                    <Footer links={this.state.footerLinks}/>
                 </div>
             </Router>
         )

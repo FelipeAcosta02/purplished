@@ -1,6 +1,5 @@
 import React from 'react';
-import Modal from 'global/UI/Modal/Modal'
-import {Button, Spinner} from 'global/UI'
+import {Button, Spinner, Modal} from 'global/UI';
 
 class AccountView extends React.Component {
     state = {
@@ -23,15 +22,6 @@ class AccountView extends React.Component {
         if (this.state.loading) {
             spinner = <Spinner/>
         }
-
-        const mediaQueryList = window.matchMedia('(min-width: 400px)');
-        mediaQueryList.onchange = function(mql){
-            if (mql.matches) {
-                spinner = <Spinner/>
-            }
-        }
-        
-
         return(
             <div>
                 <h1>Account</h1>
@@ -50,9 +40,10 @@ class AccountView extends React.Component {
                 <Button onClick={this.showModal} is="Primary" >Show modal</Button>
                 <br/>
                 <Button onClick={this.showSpinner} is="Primary" >Show spinner</Button>
+                
             </div>
         )
     }
 }
 
-export default AccountView;
+export default  AccountView;
