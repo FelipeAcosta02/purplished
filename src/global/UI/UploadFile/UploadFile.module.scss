@@ -1,0 +1,58 @@
+@import "../colors";
+.InputFile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+    z-index: -1;
+    
+}
+
+.Label {
+    transition: all 0.5s ease-out;
+    font-size: 15;
+    padding: 5px 15px;
+    border-radius: 4px;
+    line-height: 1.5;
+    display: inline-block;
+    border: 1px solid;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0.2px 0.5px whitesmoke;
+        opacity: 0.85;
+        
+    }
+}
+
+.Label.Default {
+    border-color: $purple-3;
+    cursor: pointer;
+    background-color: white;
+    color: $purple-4; 
+    &:active{
+        background-color: darken($color: white, $amount: 10);
+        opacity: 1;
+    }
+}
+
+.Label.Primary {
+    border-color: $purple-4;
+    cursor: pointer;
+    background-color: $purple-6;
+    color: white; 
+    &:active{
+        background-color: darken($color: $purple-6, $amount: 10);
+        opacity: 1;
+    }
+}
+
+.Label.Disabled {
+    opacity: 0.6;
+    &:hover {
+        cursor: not-allowed !important;
+        box-shadow: none;
+        opacity: 0.6;
+    }
+}

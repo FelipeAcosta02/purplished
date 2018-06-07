@@ -30,3 +30,7 @@ Input.propTypes={
     addonAfter: PropTypes.element,
     addonBefore: PropTypes.element,
 }
+
+Input.defaultProps={
+    is: "Default"
+}

@@ -5,13 +5,13 @@
     width: 100%;
     padding-left: 0px !important;
     display: flex;
-    z-index: 60;
+    z-index: 200;
 }
 .ItemDiv {
     height: 50px;
     display: inline-block;
     margin: auto;
-    z-index: 60;
+    z-index: 200;
     li {
         margin: 15px 20px !important;
         vertical-align: middle;
@@ -36,7 +36,8 @@
         margin: 0 !important;
         width: 50px;
         height: 100%;
-        z-index: 60;
+        z-index: 200;
+        transition: all 0.4s ease-out;
     }
 }
 .Default{
@@ -54,7 +55,8 @@
         margin: 0 !important;
         width: 50px;
         height: 100%;
-        z-index: 60;
+        z-index: 200;
+        transition: all 0.4s ease-out;
     }
 }
 
@@ -62,10 +64,10 @@
 // Vertical Navigation bar styling 
 .Vertical {
     position: absolute;
-    margin-top: 49px;
+    margin-top: 48px;
     width: 100%;
     transition: all 0.5s ease-out;
-    z-index: 50;
+    z-index: 150;
     &.Primary {
         background-color: $purple-6;
         color: whitesmoke;
@@ -83,8 +85,7 @@
         li {
             list-style-type: none;
             font-size: 1em;
-            cursor: pointer;
-            
+            cursor: pointer;            
         }
     }
 }

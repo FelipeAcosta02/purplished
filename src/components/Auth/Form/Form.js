@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from './Form.module.scss'
-import { Row, Col } from "react-grid-system";
-import { Input } from "global/UI";
+import { Input, Col, Row } from "global/UI";
 
 class Form extends React.Component {
     render() {
         let extraInput = null 
 
         if (this.props.type === 'signIn') {
-            extraInput = <Col style={styling.col} xs={12} sm={12} md={12} lg={12} xl={12} ><Input placeholder="Name"/></Col>
+            extraInput = <Col style={styling.col} xs={12} sm={12} md={12} lg={12} xl={12} ><Input placeholder="Name" is="Area"/></Col>
         }
 
         if (this.props.type === 'login') {
@@ -20,7 +19,7 @@ class Form extends React.Component {
             <Row>
                 {extraInput}
                 <Col style={styling.col} xs={12} sm={12} md={12} lg={12} xl={12} >
-                    <Input placeholder="E-mail"/>
+                    <Input placeholder="E-mail" />
                 </Col>
                 <Col style={styling.col} xs={12} sm={12} md={12} lg={12} xl={12} >
                     <Input placeholder="Password" type="password"/>
@@ -33,6 +32,7 @@ class Form extends React.Component {
 const styling = {
     col: {
         margin: '5px',
+        padding: '1px',
     }
 }
 export default Form

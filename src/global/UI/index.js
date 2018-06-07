@@ -39,3 +39,15 @@ export {default as Logo} from './Logo/Logo'
 
 // Loading spinner
 export {default as Spinner} from './Spinner/Spinner'
+
+// Switch
+export {default as Switch} from './Switch/Switch'
+
+// Upload file
+export {default as UploadFile} from './UploadFile/UploadFile'
+
+// Layout column
+export {default as Col} from './Col/Col'
+
+// Layout row
+export {default as Row} from './Row/Row'
