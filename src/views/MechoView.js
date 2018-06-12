@@ -8,6 +8,7 @@ class Mecho extends React.Component {
         let c = <Aux>&sigmaf;</Aux>
         let h = <Aux>&pi;</Aux>
         let o = <Aux>&Omega;</Aux>
+
         return(
             <div>
                 <h1>

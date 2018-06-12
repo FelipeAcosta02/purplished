@@ -6,23 +6,44 @@
     border-radius: 2.8px;
     border: 1px solid $purple-6;
     margin: auto;
-    .addonAfter{
-        margin-left: 0.2em;
-        border-top-right-radius: 1.5px !important;
-        border-bottom-right-radius: 1.5px !important;
-        border-top-left-radius: 0px !important;
-        border-bottom-left-radius: 0px !important;
+    &.Area{
+
+    }
+    &.Default{
+        line-height: 15px;
+        font-size: 12px;
+    }
+    &.Large{
+        line-height: 19px;
+        font-size: 16px;
+    }
+    &.Small{
+        line-height: 12px;
+        font-size: 9px;
+    }
+    .addonAfter, .addonBefore {
+        padding: 0.4em 0.6em !important;
+        vertical-align: middle;
+        line-height: 1.5 !important;
+        font-size: 14px !important;
+        padding: 0.2em 0.2em;
         background-color: whitesmoke !important;
         z-index: 0;
         border-radius: 0;
         border-top: none;
         border-bottom: none;
-        background-color: transparent;
-        border-left: .5px solid $purple-6;
         margin: 0 auto;
+        background-color: transparent;
+        vertical-align: middle !important;
         position: relative;
         top: -50%;
-        vertical-align: middle !important;
+    }
+    .addonAfter{
+        border-top-right-radius: 1.5px !important;
+        border-bottom-right-radius: 1.5px !important;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-left: .5px solid $purple-6;
         Button{
             border-top-right-radius: 1.5px !important;
             border-bottom-right-radius: 1.5px !important;
@@ -33,22 +54,11 @@
         }
     }
     .addonBefore{
-        margin-right: 0.2em !important;
-        background-color: whitesmoke !important;
         border-top-left-radius: 1.5px !important;
         border-bottom-left-radius: 1.5px !important;
         border-top-right-radius: 0px !important;
         border-bottom-right-radius: 0px !important;
-        z-index: 0;
-        border-radius: 0;
-        border-top: none;
-        border-bottom: none;
-        background-color: transparent;
         border-right: .5px solid $purple-6;
-        margin: 0 auto;
-        position: relative;
-        top: -50%;
-        vertical-align: middle !important;
         Button{
             border-top-left-radius: 1.5px !important;
             border-bottom-left-radius: 1.5px !important;
@@ -58,28 +68,17 @@
             border: 0;
         }
     }
+
     input, textarea{
         border: none !important;
+        font-size: 14px;
+        line-height: 1.5;
         border-radius: 2.8px;
         background-color: white;
         flex: 1;
         outline: none;
         padding: 0.4em 0.6em;
-        
-        &.Area{
-
-        }
-        &.Default{
-            
-        }
-        &.Large{
-            line-height: 1.5em;
-            font-size: 1.2em;
-        }
-        &.Small{
-            line-height: 0.9em;
-            font-size: 0.6em;
-        }
+        max-width: 100% !important;
     }
 }
 .BorderLeft{

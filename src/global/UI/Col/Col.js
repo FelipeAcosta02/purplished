@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const getWidthString = (span) => {
     if (!span) return;
 
-    let width = span / 12 * 100;
+    let width = span / 24 * 100;
     return `width: ${width}%`;
 }
 

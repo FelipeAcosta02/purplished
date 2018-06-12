@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Auth.module.scss'
-import Form from './Form/Form'
-import {Modal, Button, Col, Row} from 'global/UI'
+import {Modal, Button, Col, Row, Input} from 'global/UI'
 
 class Auth extends React.Component {
     state = {
@@ -17,15 +16,17 @@ class Auth extends React.Component {
         return(
             <div className={styles.Div}>
                     <Row>
-                        <Col xs={12} sm={12} md={12} lg={12} xl={12} >
+                        <Col xs={24} sm={24} md={24} lg={24} xl={24} >
                             <h1>Sign in</h1>
                         </Col>
-                        <Col xs={12} sm={12} md={12} lg={12} xl={12}  >
-                            <div className={styles.FormDiv}>
-                                <Form  type="signIn"/>
-                            </div>
+                        <Col xs={18} sm={24} md={24} lg={24} xl={24}  >
+                        <div className={styles.FormDiv}>
+                            <Input style={{margin: '10px'}} placeholder="Name"/>
+                            <Input placeholder="Email"/>
+                            <Input placeholder="Password" type="password"/>
+                        </div>
                         </Col>
-                        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                             <Button 
                                 style={styling.button} 
                                 is="Primary" >
@@ -33,7 +34,7 @@ class Auth extends React.Component {
                             </Button>
                         </Col>
 
-                        <Col xs={12} sm={12} md={12} lg={12} xl={12} >
+                        <Col xs={24} sm={24} md={24} lg={24} xl={24} >
                             <p className={styles.p}>Already have an account?</p>
                             <Button 
                                 style={styling.button} 
@@ -53,7 +54,7 @@ class Auth extends React.Component {
                                     Continue
                             </Button>} >
                         <div>
-                            <Form type="login"/>
+                            <Input />
                         </div>
                 </Modal>
             </div>
@@ -64,6 +65,10 @@ const styling = {
     button : {
         marginTop: '20px',
     },
+    input: {
+        margin: '10px'
+    }
+
 }
 
 export default Auth

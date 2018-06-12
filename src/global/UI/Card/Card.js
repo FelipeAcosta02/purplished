@@ -33,7 +33,7 @@ Card.propTypes={
     below: PropTypes.element
 }
 Card.defaultProps={
-    is: 'Primary',
+    is: 'Light',
     above: null,
     below: null
 }
