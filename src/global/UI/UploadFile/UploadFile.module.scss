@@ -1,19 +1,32 @@
 @import "../colors";
-Button {
+.InputFile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+    z-index: -1;
+    
+}
+
+.Label {
     transition: all 0.5s ease-out;
-    font-size: 14px;
+    font-size: 15;
     padding: 5px 15px;
     border-radius: 4px;
     line-height: 1.5;
     display: inline-block;
     border: 1px solid;
     outline: none;
+    cursor: pointer;
     &:hover {
         box-shadow: 0 0.2px 0.5px whitesmoke;
         opacity: 0.85;
+        
     }
 }
-Button.Default {
+
+.Label.Default {
     border-color: $purple-3;
     cursor: pointer;
     background-color: white;
@@ -23,7 +36,8 @@ Button.Default {
         opacity: 1;
     }
 }
-Button.Primary {
+
+.Label.Primary {
     border-color: $purple-4;
     cursor: pointer;
     background-color: $purple-6;
@@ -33,17 +47,8 @@ Button.Primary {
         opacity: 1;
     }
 }
-Button.Destroy{
-    cursor: pointer;
-    border-color: darken($color: $red, $amount: 5);
-    background-color: lighten($red, 5);
-    color: white; 
-    &:active{
-        background-color: darken($color: $red, $amount: 10);
-        opacity: 1;
-    }
-}
-Button.Disabled {
+
+.Label.Disabled {
     opacity: 0.6;
     &:hover {
         cursor: not-allowed !important;

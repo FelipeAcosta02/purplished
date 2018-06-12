@@ -4,11 +4,11 @@ import styles from './Input.module.scss'
 
 export default class Input extends React.Component {
     render(){
-            let {addonBefore, addonAfter, is, ...rest } = this.props
+            let {addonBefore, addonAfter, is, style, ...rest } = this.props
             let input = null
             let AddonBefore = addonBefore ? (<span className={styles.addonBefore}>{addonBefore}</span>) : null
             let AddonAfter = addonAfter ? (<span className={styles.addonAfter}>{addonAfter}</span>) : null
-            let InputStyles = [styles[is]+' '];
+            let InputStyles = [];
             if (addonBefore) { InputStyles.push(styles.BorderLeft+' ') }
             if (addonAfter) { InputStyles.push(styles.BorderRight+' ') }
             if(is==="Area"){
@@ -17,7 +17,7 @@ export default class Input extends React.Component {
                 input = <input  {...rest} className={InputStyles}/>
             }
         return(
-            <div className={styles.div}>
+            <div className={styles.div+' '+styles[is]} style={style}>
                 {AddonBefore}
                 {input}
                 {AddonAfter}
@@ -29,4 +29,8 @@ Input.propTypes={
     is: PropTypes.oneOf(['Area', 'Default', 'Large', 'Small']),
     addonAfter: PropTypes.element,
     addonBefore: PropTypes.element,
+}
+
+Input.defaultProps={
+    is: "Default"
 }

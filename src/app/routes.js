@@ -6,7 +6,9 @@ import {pascalToKebab} from 'global/utilities'
 
 class Routes extends React.Component {
     state = {
-        footerLinks: []
+        footerLinks:   [{main: "Welcome", subs: ["Bienvenido!", "Willkommen"]},
+                        {main: "WOW", subs: ["Mecho"]},
+                        ]
     }
     changedTabHandler = (event) => {
         this.setState({current: event.key})

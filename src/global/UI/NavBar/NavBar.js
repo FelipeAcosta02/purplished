@@ -52,13 +52,13 @@ import MediaQuery from 'react-responsive';
             if (!this.state.show) {
                 navIcon = "menu"
             }else if (this.state.show) {
-                navIcon = "xCircle"
+                navIcon = "x"
             }
 
          return(
             <div className={styles.NavBar+' '+styles[is]} {...rest}>
                 <MediaQuery query="(max-width: 599px)">
-                    <VerticalNav is={this.props.is} links={links} show={this.state.show} />
+                    <VerticalNav is={this.props.is} links={links} show={this.state.show} close={this.closeMenu}/>
                 </MediaQuery>
                 <div style={{width: '100%', maxWidth:'1200px', display:'flex', margin:'auto'}}>
                     {logo}
@@ -96,9 +96,9 @@ class VerticalNav extends React.Component {
             if (link==='Home') {
                 return null
             }else{
-                return (<div className={styles.ItemDiv} key={i}>
-                    <Link to={stringToKebab(link)}>
-                        <li>{link}</li>
+                return (<div className={styles.ItemDiv} key={i}  >
+                    <Link to={stringToKebab(link)} onClick={this.props.close} >
+                        <li >{link}</li>
                     </Link>
                 </div>)
             }

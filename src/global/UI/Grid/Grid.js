@@ -6,9 +6,11 @@ export default class Grid extends React.Component {
     render(){
         let {is, below, above, children, ...rest} = this.props
         let Above = above ? (<div className={styles.Above} >{above}</div>) : null;
-        let Below = below ? (<div className={styles.Below} >{above}</div>) : null;
-        let Content = children.map((obj, i)=>(<div key={i} className={styles.Content}>{obj}</div>))
-        console.log(children)
+        let Below = below ? (<div className={styles.Below} >{below}</div>) : null;
+        let Content = <div key={'hey'} className={styles.Content}>{children}</div>
+        if (children.length > 0) {
+            Content = children.map((obj, i)=>(<div key={i} className={styles.Content}>{obj}</div>))
+        }
         return(
             <div className={styles.Grid+' '+styles[is]} {...rest}>
                 {Above}

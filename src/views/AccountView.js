@@ -1,10 +1,11 @@
 import React from 'react';
-import {Button, Spinner, Modal} from 'global/UI';
+import {Button, Spinner, Modal, Switch, UploadFile, Row, Col} from 'global/UI';
 
 class AccountView extends React.Component {
     state = {
         visible: false, 
-        loading: false
+        loading: false,
+        checked: false,
     }
     showModal = () => {
         this.setState({visible: true})
@@ -15,6 +16,10 @@ class AccountView extends React.Component {
 
     showSpinner = () => {
         this.setState({loading: true})
+    }
+    toggleSwitch = () => {
+        this.setState({checked: !this.state.checked})
+        console.log(this.state.checked)        
     }
 
     render() {
@@ -40,7 +45,16 @@ class AccountView extends React.Component {
                 <Button onClick={this.showModal} is="Primary" >Show modal</Button>
                 <br/>
                 <Button onClick={this.showSpinner} is="Primary" >Show spinner</Button>
-                
+                <Switch onChange={this.toggleSwitch} checked={this.state.checked} />
+                <br/>
+                <UploadFile is="Primary" />
+                <div>
+                    <Row>
+                        <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6} >1</Col>
+                        <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6} >2</Col>
+                        <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6} >3</Col>
+                    </Row>
+                </div>
             </div>
         )
     }
