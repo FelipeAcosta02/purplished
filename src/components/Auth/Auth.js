@@ -22,13 +22,12 @@ class Auth extends React.Component {
                         <Col xs={18} sm={24} md={24} lg={24} xl={24}  >
                         <div className={styles.FormDiv}>
                             <Input style={{margin: '10px'}} placeholder="Name"/>
-                            <Input placeholder="Email"/>
-                            <Input placeholder="Password" type="password"/>
+                            <Input style={{margin: '10px'}} placeholder="Email"/>
+                            <Input style={{margin: '10px'}} placeholder="Password" type="password"/>
                         </div>
                         </Col>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                             <Button 
-                                style={styling.button} 
                                 is="Primary" >
                                     Continue
                             </Button>
@@ -62,12 +61,9 @@ class Auth extends React.Component {
     }
 }
 const styling = {
-    button : {
-        marginTop: '20px',
-    },
     input: {
         margin: '10px'
-    }
+    },
 
 }
 
