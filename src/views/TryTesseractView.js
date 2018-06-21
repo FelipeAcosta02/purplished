@@ -1,8 +1,6 @@
 import React from 'react';
 // import Tesseract from 'tesseract.js'
-import {Button} from 'global/UI';
-
-var Tesseract = window.Tesseract;
+import {FileInput} from 'global/UI';
 
 class TryTesseract extends React.Component {
     state = {
@@ -13,21 +11,8 @@ class TryTesseract extends React.Component {
     checkFile = (event) => {
         event.preventDefault()
         const file = this.fileInput.files[0]
+        this.setState({file: file})
         console.log(file)
-        this.useTesseract(file)
-
-    }
-    useTesseract = (image) => {
-        Tesseract.recognize(image)
-        .progress(message => {
-                        console.log(message.progress)
-                        this.setState({progress: message.progress})
-                })
-        .catch(err => console.error(err))
-        .then(result => {
-                        console.log(result)
-                        this.setState({text: result.text})
-                })
     }
     render() {
         return(
@@ -38,6 +23,7 @@ class TryTesseract extends React.Component {
                 <form onSubmit={(e) => this.checkFile(e)} >
                         <input 
                             type="file" 
+                            accept="image/*"
                             ref={input => {
                                 this.fileInput = input;
                             }}/>
@@ -45,6 +31,7 @@ class TryTesseract extends React.Component {
                 </form>
                 <p>{this.state.progress}</p>
                 <p>{this.state.text}</p>
+                <FileInput />
             </div>
         )
     }
