@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Auth.module.scss'
-import {Modal, Button, Col, Row, Input} from 'global/UI'
+import {Modal, Button, Col, Row, Input, Title} from 'global/UI'
 
 class Auth extends React.Component {
     state = {
@@ -17,18 +17,17 @@ class Auth extends React.Component {
             <div className={styles.Div}>
                     <Row>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24} >
-                            <h1>Sign in</h1>
+                            <Title is="Medium">Sign in</Title>
                         </Col>
                         <Col xs={18} sm={24} md={24} lg={24} xl={24}  >
                         <div className={styles.FormDiv}>
                             <Input style={{margin: '10px'}} placeholder="Name"/>
-                            <Input placeholder="Email"/>
-                            <Input placeholder="Password" type="password"/>
+                            <Input style={{margin: '10px'}} placeholder="Email"/>
+                            <Input style={{margin: '10px'}} placeholder="Password" type="password"/>
                         </div>
                         </Col>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                             <Button 
-                                style={styling.button} 
                                 is="Primary" >
                                     Continue
                             </Button>
@@ -53,8 +52,9 @@ class Auth extends React.Component {
                                 is="Primary">
                                     Continue
                             </Button>} >
-                        <div>
-                            <Input />
+                        <div> 
+                            <Input style={{margin: '10px'}} placeholder="Name / Email"/>
+                            <Input style={{margin: '10px'}} placeholder="Password" type="password"/>
                         </div>
                 </Modal>
             </div>
@@ -62,12 +62,9 @@ class Auth extends React.Component {
     }
 }
 const styling = {
-    button : {
-        marginTop: '20px',
-    },
     input: {
         margin: '10px'
-    }
+    },
 
 }
 

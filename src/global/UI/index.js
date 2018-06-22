@@ -43,8 +43,8 @@ export {default as Spinner} from './Spinner/Spinner'
 // Switch
 export {default as Switch} from './Switch/Switch'
 
-// Upload file
-export {default as UploadFile} from './UploadFile/UploadFile'
+// File input
+export {default as FileInput} from './FileInput/FileInput'
 
 // Layout column
 export {default as Col} from './Col/Col'

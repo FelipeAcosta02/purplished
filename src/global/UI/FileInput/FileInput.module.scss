@@ -1,12 +1,12 @@
 @import "../colors";
-.InputFile {
+.FileInput {
+    transition: all 0.3s ease-out;
 	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;
     z-index: -1;
-    
 }
 
 .Label {

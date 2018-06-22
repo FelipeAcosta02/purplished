@@ -20,7 +20,6 @@ class Routes extends React.Component {
             }else{
                 return(<Route path={'/'+pascalToKebab(View)} key={i} component={Views[View]} />)
             }})
-        console.log(views)
         return (
             <Router>
                 <div>

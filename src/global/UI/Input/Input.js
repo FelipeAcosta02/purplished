@@ -26,7 +26,7 @@ export default class Input extends React.Component {
     }
 }
 Input.propTypes={
-    is: PropTypes.oneOf(['Area', 'Default', 'Large', 'Small']),
+    is: PropTypes.oneOf(['Area', 'Default', 'Large', 'Small', 'Ghost']),
     addonAfter: PropTypes.element,
     addonBefore: PropTypes.element,
 }
